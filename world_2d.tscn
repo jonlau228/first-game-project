@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://i6kiljgclmbh"]
+
+[ext_resource type="Texture2D" uid="uid://bm3xoc2omf8k4" path="res://2D Resources/characters/DinoSprites - mort.png" id="1_laysq"]
+[ext_resource type="Texture2D" uid="uid://bol1s4l6a5m10" path="res://icon.svg" id="2_hmjmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2nsr"]
+size = Vector2(16, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4oe8"]
+size = Vector2(128, 16)
+
+[node name="World2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="DinoSpritesMort" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_laysq")
+region_enabled = true
+region_rect = Rect2(195, 0, 24, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_u2nsr")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="Floor"]
+position = Vector2(0, 27)
+scale = Vector2(1, 0.125)
+texture = ExtResource("2_hmjmd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, 27)
+shape = SubResource("RectangleShape2D_y4oe8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -52.0
+offset_top = -38.0
+offset_right = 51.0
+offset_bottom = -15.0
+text = "Jonathan Lau"
