@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bm3xoc2omf8k4" path="res://2D Resources/characters/DinoSprites - mort.png" id="1_laysq"]
 [ext_resource type="Texture2D" uid="uid://bol1s4l6a5m10" path="res://icon.svg" id="2_hmjmd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2nsr"]
-size = Vector2(16, 17)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_laysq"]
+radius = 7.0
+height = 17.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4oe8"]
 size = Vector2(128, 16)
@@ -14,16 +15,16 @@ size = Vector2(128, 16)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
 
-[node name="DinoSpritesMort" type="Sprite2D" parent="CharacterBody2D"]
+[node name="DinoSpritesMort" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_laysq")
 region_enabled = true
 region_rect = Rect2(195, 0, 24, 24)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-2, 0.5)
-shape = SubResource("RectangleShape2D_u2nsr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_laysq")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 
