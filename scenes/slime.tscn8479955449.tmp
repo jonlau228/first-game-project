@@ -61,7 +61,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a02ik"]
-size = Vector2(12, 1)
+size = Vector2(6, 1)
 
 [node name="Slime" type="Node2D"]
 scale = Vector2(2, 2)
