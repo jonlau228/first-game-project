@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://sod0wtrv5xl5"]
+
+[ext_resource type="Script" uid="uid://d1aecr0ujwouj" path="res://scripts/canvas_layer.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://c8n5w5st8wf6w" path="res://tilesets/back.png" id="2_bqqt6"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_ekxnf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bqqt6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 334.0
+offset_top = 233.0
+offset_right = 793.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.37466282, 0.4659177, 0.81556195, 1)
+theme_override_font_sizes/font_size = 40
+text = "Welcome to First Game!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = 73.0
+offset_right = -13.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

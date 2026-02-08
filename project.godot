@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="First Game Project"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="uid://sod0wtrv5xl5"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+BackgroundMusic="*res://scenes/background_music.tscn"
 
 [debug]
 

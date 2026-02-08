@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://ca76xtd8jarum"]
 
-[ext_resource type="Script" uid="uid://ckini4ve7tg8o" path="res://slime.gd" id="1_p2gj0"]
+[ext_resource type="Script" uid="uid://ckini4ve7tg8o" path="res://scripts/slime.gd" id="1_p2gj0"]
 [ext_resource type="Texture2D" uid="uid://c2qlu3v680prx" path="res://enemies/Ogre Slime Spritesheet.png" id="2_n6pvg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pjw23"]
